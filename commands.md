@@ -1,11 +1,11 @@
-#User exec mode (Switch>)
+# User exec mode (Switch>)
 * enable - [Privileged exec mode](#Privileged exec mode)
 
 
-#Privileged exec mode (Switch#)
+# Privileged exec mode (Switch#)
 * config <terminal/line>
 
 
-#Global Configuration mode (Switch(config))
+# Global Configuration mode (Switch(config))
 
 
