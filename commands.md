@@ -1,13 +1,13 @@
 # Commands for Router and Switch
 
 ## User exec mode (Switch>)
-* ``enable`` - [Privileged exec mode](#Privileged-exec-mode-``Switch#``)
+* ``enable`` - [Privileged exec mode](#privileged-exec-mode-switch)
 * ``show version`` - Display software version and system information
 * ``exit`` - Exit to previous mode
 * ``help`` - Display available commands
 
 ## Privileged exec mode ``Switch#``
-* ``configure terminal`` -  [Global Configuration mode](#Global-configuration-mode-``Switch(config)``)
+* ``configure terminal`` -  [Global Configuration mode](#global-configuration-mode-switchconfig)
 * ``show running-config``: Display current configuration
 * ``show ip interface brief``: Display brief interface status
 * ``reload``: Reload the router
@@ -24,7 +24,7 @@
 * ``interface [type number]`` - Enter [Interface Configuration mode](#interface-configuration-mode-switchconfig-if)
 * ``ip address [address] [subnet mask]`` - Set IP address on interface
 * ``no shutdown`` - Enable interface
-* ``line vty 0 4`` - Enter [Line Configuration mode](#Line-Configuration-Mode-``Switch(config-line)#``)
+* ``line vty 0 4`` - Enter [Line Configuration mode](#line-configuration-mode-switchconfig-line)
 * ``password <password>`` - Set password for VTY lines
 * ``exit`` - Exit to Global Configuration mode
 
