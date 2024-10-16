@@ -33,6 +33,28 @@
 * ``no shutdown`` - Enable interface
 * ``exit`` - Exit to Global Configuration mode
 
+
+k
+k
+kk
+k
+k
+k
+k
+k
+
+kk
+k
+kkk
+k
+k
+k
+k
+k
+k
+k
+k
+
 # Line Configuration Mode ``Switch(config-line)#``
 * ``password <password>`` - Set password for VTY lines
 * ``exit`` - Exit to Global Configuration mode
