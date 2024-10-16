@@ -21,7 +21,7 @@
 
 ## Global Configuration mode ``Switch(config)``
 * ``hostname <name>`` - Set hostname
-* ``interface [type number]`` - Enter [Interface Configuration mode](#Interface-Configuration-Mode-``Switch(config-if)#``)
+* ``interface [type number]`` - Enter [Interface Configuration mode](#interface-configuration-mode-switchconfig-if)
 * ``ip address [address] [subnet mask]`` - Set IP address on interface
 * ``no shutdown`` - Enable interface
 * ``line vty 0 4`` - Enter [Line Configuration mode](#Line-Configuration-Mode-``Switch(config-line)#``)
