@@ -1,6 +1,6 @@
 # Commands for Router and Switch
 
-## User exec mode (Switch>)
+## User exec mode ``Switch>``
 * ``enable`` - přejde do [Privileged exec mode](#privileged-exec-mode-switch)
 * ``show version`` - Zobrazí verzi
 * ``exit`` - Vrátí zpět do předchozího modu
