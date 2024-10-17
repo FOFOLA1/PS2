@@ -9,7 +9,10 @@
 ## Privileged exec mode ``Switch#``
 * ``configure terminal`` -  přejde na [Global Configuration mode](#global-configuration-mode-switchconfig)
 * ``show running-config``: Zobrazí aktuální config (není uložen v paměti, po restartu se smaže)
-* ``line console [number]``: přejde do [Line Configuration mode](#line-configuration-mode-switchconfig-line) k nastavení připojení pomcí console portu (VTY)
+* ``show startup-config``: Zobrazí config, který se použije po zapnutí routeru
+* ``copy running-config startup-config``: Nakopíruje běžící config do paměti routeru (tj. použije se po zapnurí switche/routeru)
+* ``copy startup-config running-config``: Proběhne merge obou configů, nikoli kopie (lepší použít ``reload`` pokud to není nutné)
+* ``line console [number]``: přejde do [Line Configuration mode](#line-configuration-mode-switchconfig-line) k nastavení připojení pomcí console portu (popřípadě VTY)
 * ``show ip interface brief``: Zobrazí jednoduchý status ip rozhraní
 * ``reload``: Restart
 * ``exit``: Vrátí do [user exec mode](#user-exec-mode-switch)
@@ -21,20 +24,22 @@
 
 
 ## Global Configuration mode ``Switch(config)``
-* ``hostname <name>`` - Set hostname
-* ``interface [type number]`` - Enter [Interface Configuration mode](#interface-configuration-mode-switchconfig-if)
-* ``ip address [address] [subnet mask]`` - Set IP address on interface
-* ``no shutdown`` - Enable interface
-* ``line vty 0 4`` - Enter 
-* ``password <password>`` - Set password for VTY lines
-* ``exit`` - Exit to Global Configuration mode
+* ``hostname <name>`` - Nastaví hostname (Tedy to, co vidím na začátku každýho řádku, default je Switch nebo Router)
+* ``banner motd "text"``: Nastavení úvodní zprávy při vstupu do global configu
+* ``interface [number]`` - Vstup do [Interface Configuration mode](#interface-configuration-mode-switchconfig-if) k nastavení například jednotlivých portů (první je označen 0)
+* ``ip address [address] [subnet mask]`` - Nastaví IP a masku
+* ``service password-encryprion``: nastaví kódování hesla, aby nebyly lehce čitelné v configu (stále se dají lehce encryptovat)
+* ``no shutdown`` - Zapne rozhraní
+* ``line vty 0 4`` - Vstup do [Line Configuration mode](#line-configuration-mode-switchconfig-line)
+* ``password <password>`` - Nastavení hesla pro VTY linky
+* ``exit`` - Vrácení do global config mode
 
 # Interface Configuration Mode ``Switch(config-if)#``
-* ``ip address [address] [subnet mask]`` - Set IP address on interface
-* ``no shutdown`` - Enable interface
-* ``exit`` - Exit to Global Configuration mode
+* ``ip address [address] [subnet mask]`` - Přidělí IP adresu danému rozhraní
+* ``no shutdown`` - Zapne rozhraní
+* ``exit`` - Navrácení do global config modu
 
 
 # Line Configuration Mode ``Switch(config-line)#``
-* ``password <password>`` - Set password for VTY lines
-* ``exit`` - Exit to Global Configuration mode
+* ``password <password>`` - Nastavení hesla pro linku
+* ``exit`` - Navrácení do glogal configu
